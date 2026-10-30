@@ -151,7 +151,12 @@ annotate_vcf() {  # annotate_vcf in.vcf.gz out.vcf.gz   (ClinVar -> VEP -> gnomA
     -i "$base.cv.vcf.gz" -o "$base.vep.vcf.gz" --compress_output bgzip \
     --fasta "$REF" --gff "$A/genes.gff3.gz" --symbol --hgvs --canonical --allele_number \
     --fields "Allele,ALLELE_NUM,Consequence,IMPACT,SYMBOL,Gene,Feature,CANONICAL,HGVSc,HGVSp"
-  run "$BCFTOOLS" sh -c "bcftools query -i 'INFO/CSQ~\"missense|stop_gained|frameshift|splice_|start_lost|stop_lost|inframe_|protein_altering\" || INFO/CLNSIG!=\".\"' -f '%CHROM\t%POS\n' $base.vep.vcf.gz" > "$base.sites.tsv"
+  # bcftools' ~ operator has no regex alternation, so OR one condition per consequence
+  local expr='INFO/CLNSIG!="."' t
+  for t in missense stop_gained frameshift splice_ start_lost stop_lost inframe_ protein_altering; do
+    expr+=" || INFO/CSQ~\"$t\""
+  done
+  run "$BCFTOOLS" bcftools query -i "$expr" -f '%CHROM\t%POS\n' "$base.vep.vcf.gz" > "$base.sites.tsv"
   fetch_gnomad "$base.sites.tsv"
   printf '##INFO=<ID=gnomAD_AF,Number=A,Type=Float,Description="gnomAD v4.1 genomes AF">\n##INFO=<ID=gnomAD_AF_grpmax,Number=A,Type=Float,Description="gnomAD v4.1 genomes grpmax AF">\n' > "$A/gnomad.hdr"
   run "$BCFTOOLS" sh -c "bcftools annotate -a $A/gnomad.tsv.gz -c CHROM,POS,REF,ALT,gnomAD_AF,gnomAD_AF_grpmax -h $A/gnomad.hdr $base.vep.vcf.gz -Oz -o $out"

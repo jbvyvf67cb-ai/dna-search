@@ -240,3 +240,14 @@ def test_clinvar_evidence_only_counts_for_its_gene(tmp_path):
     ]
     g = by_gene(_run(tmp_path, recs))
     assert "ARGENE" not in g
+
+
+def test_warns_when_frequencies_missing(tmp_path):
+    recs = [rec("chr1", 100 + i, "A", "T", ["0/1", "0/1", "0/0"], f"CSQ={csq('ADGENE', 'missense_variant')}")
+            for i in range(60)]
+    (tmp_path / "t.vcf").write_text(HEADER + "\n".join(recs) + "\n")
+    (tmp_path / "panel.tsv").write_text(PANEL)
+    (tmp_path / "case.toml").write_text(CASE)
+    case = triage.load_case(str(tmp_path / "case.toml"))
+    triage.run(case, str(tmp_path / "t.vcf"))
+    assert any("no population allele frequency" in w for w in case.warnings)

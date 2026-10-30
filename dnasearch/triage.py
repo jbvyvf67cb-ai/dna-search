@@ -172,6 +172,7 @@ def run(case: Case, vcf_path: str) -> Result:
     me_checked = me_errors = 0
     x_alt = x_het = 0
     sv_seen = 0
+    no_af = 0
     cands: list[Annotated] = []
 
     for v in rdr:
@@ -200,6 +201,7 @@ def run(case: Case, vcf_path: str) -> Result:
                 or (a.spliceai or 0) >= f["spliceai_min"]):
             continue
         counts["protein/splice-affecting or ClinVar P/LP"] += 1
+        no_af += a.af is None
         if a.clinvar_benign:
             continue
         loosest = f["max_af_clinvar_pathogenic"] if a.clinvar_pathogenic else f["max_af_recessive"]
@@ -289,6 +291,14 @@ def run(case: Case, vcf_path: str) -> Result:
         "proband_chrX_het_fraction": (x_het / x_alt) if x_alt else None,
         "declared_sex": {1: "male", 2: "female"}.get(ped.proband_person.sex, "unknown"),
     }
+    affecting = counts["protein/splice-affecting or ClinVar P/LP"]
+    qc["affecting_without_population_af"] = no_af
+    # most protein-affecting variants in any genome are common; if many lack a frequency the
+    # annotation is incomplete and the rarity filter is silently letting everything through
+    if affecting >= 50 and no_af / affecting > 0.3:
+        case.warnings.append(
+            f"{no_af} of {affecting} protein-affecting variants have no population allele frequency; "
+            "check the gnomAD annotation (field names in [annotation].af) before trusting rarity filtering")
     if qc["proband_chrX_het_fraction"] is not None and x_alt >= 50:
         inferred = "male" if qc["proband_chrX_het_fraction"] < 0.2 else "female"
         qc["inferred_sex_from_chrX"] = inferred

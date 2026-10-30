@@ -112,6 +112,8 @@ def write(case: Case, res: Result, outdir: str) -> dict[str, str]:
     if q["mendelian_error_rate"] is not None:
         md.append(f"- Mendelian errors: {q['mendelian_errors']:,} / {q['mendelian_sites_checked']:,} "
                   f"sites ({q['mendelian_error_rate']:.3%})")
+    md.append(f"- Protein-affecting variants without a population frequency: "
+              f"{q['affecting_without_population_af']:,}")
     if q["proband_chrX_het_fraction"] is not None:
         md.append(f"- Proband chrX (non-PAR) heterozygous fraction: {q['proband_chrX_het_fraction']:.2f} "
                   f"over {q['proband_chrX_nonPAR_alt_sites']:,} sites"
