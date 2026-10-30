@@ -110,7 +110,8 @@ stage_annotate() {
     [[ -s $A/clinvar.raw.vcf.gz ]] || curl -fsSL -o "$A/clinvar.raw.vcf.gz" "$CLINVAR_URL"
     # ClinVar uses bare chromosome names; the reference uses chr-prefixed ones
     for c in $(seq 1 22) X Y MT; do echo "$c chr${c/MT/M}"; done > "$A/chrmap.txt"
-    run "$BCFTOOLS" sh -c "bcftools annotate --rename-chrs $A/chrmap.txt $A/clinvar.raw.vcf.gz -Oz -o $A/clinvar.vcf.gz && bcftools index -t $A/clinvar.vcf.gz"
+    # ClinVar's header has no ##contig lines; bcftools needs an index to know them
+    run "$BCFTOOLS" sh -c "tabix -f -p vcf $A/clinvar.raw.vcf.gz && bcftools annotate --rename-chrs $A/chrmap.txt $A/clinvar.raw.vcf.gz -Oz -o $A/clinvar.vcf.gz && bcftools index -t $A/clinvar.vcf.gz"
     rm -f "$A/clinvar.raw.vcf.gz"
   fi
   if [[ ! -s $A/genes.gff3.gz.tbi ]]; then
