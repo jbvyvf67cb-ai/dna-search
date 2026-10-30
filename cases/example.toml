@@ -1,0 +1,41 @@
+# Copy to cases/<you>.toml (cases/*.toml other than this example are git-ignored).
+[case]
+id = "my_case"
+proband = "ME"
+# Phenotype as HPO terms: the single most useful input for ranking.
+# Look terms up at https://hpo.jax.org. Be specific; include lab findings.
+hpo = [
+  "HP:0002718",  # Recurrent bacterial infections
+  "HP:0004313",  # Decreased circulating antibody level
+]
+
+[[samples]]
+id = "ME"          # must match the sample name in the VCF
+sex = "female"     # male | female
+affected = true
+# father = "DAD"   # add parents (and their samples in the VCF) for trio analysis
+# mother = "MOM"
+
+[resources]
+panels = [{ name = "PanelApp primary immunodeficiency (green)", path = "../resources/panels/primary_immunodeficiency.tsv" }]
+hpo_dir = "../resources/hpo"
+acmg_sf = "../resources/acmg_sf.tsv"
+difficult_genes = "../resources/difficult_genes.tsv"
+# coverage_bed = "../results/ME.regions.bed.gz"   # mosdepth --by panel BED, for low-coverage gene list
+
+[filters]   # defaults shown
+min_gq = 20
+min_dp = 8
+max_af_dominant = 0.001
+max_af_recessive = 0.01
+max_af_clinvar_pathogenic = 0.1
+spliceai_min = 0.2
+
+[report]
+# Incidental findings in actionable genes (cancer, cardiac, ...), unrelated to the question
+# being asked. Decide BEFORE looking.
+secondary_findings = false
+carrier_status = false
+
+# [annotation]   # override where allele frequency / ClinVar / SpliceAI are read from
+# af = ["INFO:GNOMADAF_popmax", "INFO:GNOMADAF"]

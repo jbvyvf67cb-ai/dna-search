@@ -1,0 +1,638 @@
+## source: Genomics England PanelApp panel 398 'Primary immunodeficiency or monogenic inflammatory bowel disease' version 9.112 (2026-10-30)
+## confidence: 3=green (diagnostic grade), 2=amber, 1=red
+symbol	confidence	mode_of_inheritance	hgnc_id	grch38_location
+ABI3	1	Unknown	HGNC:29859	17:49210227-49223225
+ACD	3	BOTH monoallelic and biallelic (but BIALLELIC mutations cause a more SEVERE disease form), autosomal or pseudoautosomal	HGNC:25070	16:67657512-67660815
+ACP5	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:124	19:11574660-11579008
+ACTB	1	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:132	7:5527151-5563784
+ADA	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:186	20:44619522-44652233
+ADA2	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1839	22:17178790-17221989
+ADAM17	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:195	2:9488486-9555792
+ADAR	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:225	1:154582062-154627999
+AGR2	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:328	7:16791811-16833433
+AICDA	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:13203	12:8602166-8612871
+AIRE	3	BOTH monoallelic and biallelic (but BIALLELIC mutations cause a more SEVERE disease form), autosomal or pseudoautosomal	HGNC:360	21:44285838-44298648
+AK2	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:362	1:33007940-33080996
+ALPI	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:437	2:232456123-232460032
+ALPK1	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:20917	4:112285509-112442620
+AMFR	1	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:463	16:56361452-56425538
+ANGPT1	2	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:484	8:107249482-107498055
+ANKZF1	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:25527	2:219229757-219236669
+AP1M2	0	BIALLELIC, autosomal or pseudoautosomal	HGNC:558	19:10572671-10587315
+AP1S3	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:18971	2:223751686-223838027
+AP3B1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:566	5:78000525-78294755
+AP3D1	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:568	19:2100988-2164465
+APOL1	1	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:618	22:36253010-36267530
+ARHGAP42	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:26545	11:100687653-100991937
+ARHGEF1	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:681	19:41883161-41930150
+ARPC1B	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:704	7:99374249-99394801
+ARPC5	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:708	1:183620846-183635757
+ASXL1	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:18318	20:32358344-32439319
+ATAD3A	2	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:25567	1:1512151-1534687
+ATG4A	1	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:16489	X:108091668-108154671
+ATM	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:795	11:108222484-108369102
+ATP6AP1	3	X-LINKED: hemizygous mutation in males, biallelic mutations in females	HGNC:868	X:154428632-154436516
+ATP6AP2	2	X-LINKED: hemizygous mutation in males, monoallelic mutations in females may cause disease (may be less severe, later onset than males)	HGNC:18305	X:40579372-40606848
+ATRIP	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:33499	3:48446710-48465716
+B2M	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:914	15:44711477-44718877
+BACH2	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:14078	6:89926529-90296908
+BCL10	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:989	1:85266248-85277090
+BCL11B	2	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:13222	14:99169287-99271524
+BIRC3	2	BOTH monoallelic and biallelic (but BIALLELIC mutations cause a more SEVERE disease form), autosomal or pseudoautosomal	HGNC:591	11:102317450-102339403
+BLM	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1058	15:90717327-90816165
+BLNK	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:14211	10:96191702-96271587
+BLOC1S6	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:8549	15:45587123-45615999
+BRAF	1	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:1097	7:140719327-140924764
+BRCA1	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:1100	17:43044295-43170245
+BRCA2	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:1101	13:32315474-32400266
+BRF2	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:17298	8:37843268-37849904
+BTK	3	X-LINKED: hemizygous mutation in males, biallelic mutations in females	HGNC:1133	X:101349447-101390796
+C17orf62	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:28672	17:82442589-82450829
+C1QA	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1241	1:22636506-22639608
+C1QB	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1242	1:22652762-22661538
+C1QC	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1245	1:22643630-22648110
+C1R	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1246	12:7080209-7092607
+C1S	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1247	12:6988259-7071032
+C2	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:1248	6:31897785-31945672
+C2orf69	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:26799	2:199911256-199955935
+C3	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1318	19:6677704-6730562
+C4A	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1323	6:31982024-32002681
+C4B	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1324	6:32014762-32035418
+C5	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1331	9:120952335-121050276
+C6	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1339	5:41142234-41261438
+C7	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1346	5:40909252-40982939
+C8A	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1352	1:56854806-56918221
+C8B	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1353	1:56929210-56966140
+C8G	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:1354	9:136945246-136946974
+C9	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1358	5:39284262-39424868
+CARD10	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:16422	22:37490362-37519542
+CARD11	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:16393	7:2906141-3043945
+CARD14	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:16446	17:80169992-80209331
+CARD8	2	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:17057	19:48180770-48255946
+CARD9	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:16391	9:136361903-136373681
+CARMIL2	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:27089	16:67644919-67657569
+CASP1	1	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:1499	11:105025443-105035250
+CASP10	2	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:1500	2:201182881-201229406
+CASP8	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1509	2:201233443-201287711
+CBLB	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1542	3:105655461-105869552
+CCBE1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:29426	18:59430940-59697380
+CD19	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1633	16:28931939-28939346
+CD247	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1677	1:167430640-167518610
+CD27	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:11922	12:6444867-6451718
+CD274	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:17635	9:5450503-5470566
+CD28	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:1653	2:203706475-203738912
+CD3D	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1673	11:118338954-118342744
+CD3E	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1674	11:118304545-118316175
+CD3G	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1675	11:118344344-118355161
+CD4	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1678	12:6786858-6820808
+CD40	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:11919	20:46118272-46129863
+CD40LG	3	X-LINKED: hemizygous mutation in males, biallelic mutations in females	HGNC:11935	X:136648193-136660390
+CD46	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:6953	1:207752057-207795513
+CD48	2	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:1683	1:160678746-160711851
+CD55	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:2665	1:207321508-207386804
+CD59	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1689	11:33698261-33736445
+CD70	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:11937	19:6583183-6604103
+CD79A	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1698	19:41877120-41881372
+CD79B	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1699	17:63928740-63932354
+CD81	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1701	11:2376177-2397419
+CD8A	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:1706	2:86784610-86808396
+CDC42	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:1736	1:22052627-22092946
+CDCA7	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:14628	2:173354820-173368997
+CEBPE	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:1836	14:23117304-23119616
+CFB	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:1037	6:31945650-31952084
+CFD	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:2771	19:859643-863630
+CFH	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:4883	1:196651878-196747504
+CFHR1	1	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:4888	1:196819757-196832189
+CFHR2	1	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:4890	1:196943772-196959226
+CFHR3	1	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:16980	1:196774795-196795406
+CFHR4	1	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:16979	1:196850241-196918972
+CFHR5	1	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:24668	1:196977556-197009674
+CFI	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:5394	4:109740694-109802179
+CFP	3	X-LINKED: hemizygous mutation in males, biallelic mutations in females	HGNC:8864	X:47623172-47630305
+CFTR	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:1884	7:117465784-117715971
+CHD7	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:20626	8:60678778-60868028
+CHUK	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:1974	10:100188298-100229619
+CIB1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:16920	15:90229975-90234047
+CIITA	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:7067	16:10866222-10932281
+CLCN7	1	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:2025	16:1444934-1475580
+CLEC7A	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:14558	12:10116777-10130258
+CLPB	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:30664	11:72292425-72434680
+CNBP	1	Other	HGNC:13164	3:129169484-129183922
+COL7A1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:2214	3:48564073-48595267
+COLEC11	1		HGNC:17213	2:3594832-3644644
+COPA	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:2230	1:160289273-160343400
+COPG1	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:2236	3:129249606-129277773
+CORO1A	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:2252	16:30182827-30189076
+CR2	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:2336	1:207454230-207489895
+CRACR2A	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:28657	12:3606633-3764819
+CREBBP	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:2348	16:3725054-3880726
+CSF2	1	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:2434	5:132073790-132076170
+CSF2RA	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:2435	X:1268800-1310381
+CSF2RB	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:2436	22:36913628-36940449
+CSF3	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:2438	17:40015361-40017813
+CSF3R	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:2439	1:36466043-36483278
+CTC1	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:26169	17:8224821-8248044
+CTLA4	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:2505	2:203867786-203873960
+CTNNBL1	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:15879	20:37693955-37872129
+CTPS1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:2519	1:40979335-41012565
+CTSC	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:2528	11:88293592-88337787
+CXCR2	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:6027	2:218125289-218137253
+CXCR4	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:2561	2:136114349-136118165
+CXorf36	1	Unknown	HGNC:25866	X:45148374-45200901
+CYBA	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:2577	16:88643283-88651152
+CYBB	3	X-LINKED: hemizygous mutation in males, monoallelic mutations in females may cause disease (may be less severe, later onset than males)	HGNC:2578	X:37780011-37813461
+DBR1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:15594	3:138161012-138174949
+DCLRE1B	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:17641	1:113905141-113914086
+DCLRE1C	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:17642	10:14897359-14954432
+DDX58	1	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:19102	9:32455705-32526324
+DEF6	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:2760	6:35297852-35321771
+DGAT1	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:2843	8:144314584-144326910
+DIAPH1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:2876	5:141515016-141619055
+DKC1	3	X-LINKED: hemizygous mutation in males, biallelic mutations in females	HGNC:2890	X:154762742-154777689
+DNAJC17	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:25556	15:40765155-40807478
+DNAJC21	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:27030	5:34929593-34958964
+DNASE1L3	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:2959	3:58192257-58214697
+DNASE2	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:2960	19:12875211-12881468
+DNMT3B	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:2979	20:32762385-32809356
+DOCK11	3	X-LINKED: hemizygous mutation in males, biallelic mutations in females	HGNC:23483	X:118495898-118686163
+DOCK2	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:2988	5:169637247-170083382
+DOCK8	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:19191	9:214854-465259
+DPP9	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:18648	19:4675224-4724673
+DSG1	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:3048	18:31318089-31357029
+DUOX2	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:13273	15:45092650-45114344
+DUT	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:3078	15:48331011-48343373
+EFL1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:25789	15:82130230-82262763
+ELANE	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:3309	19:851014-856247
+ELF4	3	X-LINKED: hemizygous mutation in males, monoallelic mutations in females may cause disease (may be less severe, later onset than males)	HGNC:3319	X:130064874-130110716
+EP300	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:3373	22:41091786-41180079
+EPCAM	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:11529	2:47345158-47387601
+EPG5	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:29331	18:45847609-45967274
+ERBIN	2	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:15842	5:65926475-66082549
+ERCC2	1	Unknown	HGNC:3434	19:45349837-45370918
+ERCC3	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:3435	2:127257290-127294176
+ERCC4	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:3436	16:13920157-13952345
+ERCC6L2	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:26922	9:95875701-96014571
+EXTL3	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:3518	8:28600469-28755599
+EZR	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:12691	6:158765741-158819412
+F12	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:3530	5:177402140-177409576
+FAAP24	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:28467	19:32972209-32978222
+FADD	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:3573	11:70203163-70207390
+FANCF	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:3587	11:22622519-22626787
+FANCI	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:25568	15:89243949-89317261
+FANCM	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:23168	14:45135940-45200890
+FAS	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:11920	10:88990582-89015785
+FASLG	3	BOTH monoallelic and biallelic (but BIALLELIC mutations cause a more SEVERE disease form), autosomal or pseudoautosomal	HGNC:11936	1:172659018-172666874
+FAT4	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:23109	4:125316399-125492932
+FBF1	1		HGNC:24674	17:75909574-75941140
+FBRS	1	Unknown	HGNC:20442	16:30658431-30670814
+FCGR1A	1		HGNC:3613	1:149782671-149792518
+FCGR2A	1		HGNC:3616	1:161505430-161524013
+FCGR2B	1		HGNC:3618	1:161663147-161678654
+FCGR3A	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:3619	1:161541759-161550737
+FCGR3B	1	Unknown	HGNC:3620	1:161623196-161631963
+FCGRT	1		HGNC:3621	19:49506816-49526333
+FCHO1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:29002	19:17747718-17788568
+FCN3	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:3625	1:27369112-27374824
+FERMT1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:15889	20:6074845-6123544
+FERMT3	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:23151	11:64206678-64223886
+FGL2	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:3696	7:77193371-77199848
+FGR	2	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:3697	1:27612064-27635277
+FLT3LG	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:3766	19:49474207-49486231
+FMNL2	2	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:18267	2:152335237-152649834
+FNIP1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:29418	5:131641714-131797063
+FOXI3	2	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:35123	2:88446787-88452656
+FOXM1	1	Unknown	HGNC:3818	12:2857681-2877155
+FOXN1	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:12765	17:28506243-28538896
+FOXP3	3	X-LINKED: hemizygous mutation in males, biallelic mutations in females	HGNC:6106	X:49250436-49264826
+FPR1	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:3826	19:51745172-51804110
+FPR2	1		HGNC:3827	19:51752026-51770526
+FPR3	1		HGNC:3828	19:51795163-51826189
+G6PC3	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:24861	17:44070735-44076344
+G6PD	3	X-LINKED: hemizygous mutation in males, biallelic mutations in females	HGNC:4057	X:154531391-154547572
+GAD1	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:4092	2:170813213-170861151
+GALE	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:4116	1:23795599-23800804
+GATA1	3	X-LINKED: hemizygous mutation in males, biallelic mutations in females	HGNC:4170	X:48786554-48794311
+GATA2	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:4171	3:128479427-128493185
+GCC2	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:23218	2:108448561-108509415
+GFI1	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:4237	1:92474762-92486876
+GIMAP5	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:18005	7:150722253-150750033
+GIMAP6	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:21918	7:150625375-150632648
+GINS1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:28980	20:25407727-25452628
+GINS4	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:28226	8:41529206-41545046
+GNAI2	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:4385	3:50226292-50259355
+GPR15	2	BOTH monoallelic and biallelic (but BIALLELIC mutations cause a more SEVERE disease form), autosomal or pseudoautosomal	HGNC:4469	3:98531899-98533150
+GTF2H5	1		HGNC:21157	6:158168352-158199344
+GTF3A	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:4662	13:27424544-27435823
+GTF3AP5	0	BIALLELIC, autosomal or pseudoautosomal	HGNC:49748	7:14985378-14986074
+GUCY2C	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:4688	12:14612632-14696585
+HAVCR2	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:18437	5:157085832-157142869
+HAX1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:16915	1:154272511-154275875
+HCK	2	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:4840	20:32052188-32101856
+HELLS	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:4861	10:94501434-94613905
+HMOX1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:5013	22:35380361-35394214
+HOXA3	0	BIALLELIC, autosomal or pseudoautosomal	HGNC:5104	7:27106184-27152581
+HPS1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:5163	10:98416198-98446947
+HPS4	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:15844	22:26443423-26483837
+HPS6	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:18817	10:102065390-102068038
+HS3ST6	1	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:14178	16:1911463-1918440
+HSPA1L	2	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:5234	6:31809619-31815065
+HTRA2	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:14348	2:74529377-74533348
+HYOU1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:16931	11:119044189-119057202
+ICOS	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:5351	2:203936748-203961577
+ICOSLG	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:17087	21:44222991-44240966
+IFIH1	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:18873	2:162267079-162318703
+IFNAR1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:5432	21:33324477-33359862
+IFNAR2	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:5433	21:33229901-33265675
+IFNG	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:5438	12:68154768-68159747
+IFNGR1	3	BOTH monoallelic and biallelic (but BIALLELIC mutations cause a more SEVERE disease form), autosomal or pseudoautosomal	HGNC:5439	6:137197484-137219449
+IFNGR2	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:5440	21:33402896-33479348
+IGHG2	1		HGNC:5526	14:105639559-105644790
+IGHM	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:5541	14:105851708-105856218
+IGKC	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:5716	2:88857161-88857683
+IGLL1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:5870	22:23573125-23580308
+IKBKB	3	BOTH monoallelic and biallelic (but BIALLELIC mutations cause a more SEVERE disease form), autosomal or pseudoautosomal	HGNC:5960	8:42271302-42332653
+IKBKE	2	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:14552	
+IKBKG	3	X-LINKED: hemizygous mutation in males, biallelic mutations in females	HGNC:5961	X:154541199-154565046
+IKZF1	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:13176	7:50304124-50405101
+IKZF2	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:13177	2:212999691-213152427
+IKZF3	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:13178	17:39757715-39864188
+IL10	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:5962	1:206767602-206772494
+IL10RA	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:5964	11:117986348-118003037
+IL10RB	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:5965	21:33266358-33310187
+IL12B	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:5970	5:159314783-159330887
+IL12RB1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:5971	19:18058995-18098944
+IL12RB2	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:5972	1:67307364-67396900
+IL17A	1		HGNC:5981	6:52186387-52190638
+IL17F	2	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:16404	6:52236681-52244537
+IL17RA	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:5985	22:17084954-17115694
+IL17RC	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:18358	3:9917074-9933630
+IL18	1		HGNC:5986	11:112143251-112164117
+IL18BP	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:5987	11:71998541-72005715
+IL1R1	2	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:5993	2:102064544-102179874
+IL1RN	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:6000	2:113107214-113134016
+IL21	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:6005	4:122612628-122621069
+IL21R	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:6006	16:27402162-27452042
+IL22	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:14900	12:68248242-68253607
+IL23A	1		HGNC:15488	12:56334174-56340410
+IL23R	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:19100	1:67138907-67259979
+IL27RA	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:17290	19:14031748-14053216
+IL2RA	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:6008	10:6010689-6062325
+IL2RB	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:6009	22:37125838-37175054
+IL2RG	3	X-LINKED: hemizygous mutation in males, biallelic mutations in females	HGNC:6010	X:71107404-71112108
+IL31RA	1	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:18969	5:55851379-55922853
+IL36RN	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:15561	2:113058638-113065382
+IL37	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:15563	2:112912971-112918882
+IL6	1	Unknown	HGNC:6018	7:22725884-22732002
+IL6R	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:6019	1:154405193-154469450
+IL6ST	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:6021	5:55935095-55994993
+IL7	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:6023	8:78675743-78805523
+IL7R	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:6024	5:35852695-35879603
+INO80	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:26956	15:40978880-41116354
+IPO8	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:9853	12:30628988-30695986
+IRAK1	1	X-LINKED: hemizygous mutation in males, biallelic mutations in females	HGNC:6112	X:154010500-154019980
+IRAK2	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:6113	3:10164865-10243743
+IRAK4	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:17967	12:43758944-43789543
+IRF1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:6116	5:132481609-132490798
+IRF2BP2	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:21729	1:234604269-234609525
+IRF3	2	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:6118	19:49659569-49665875
+IRF4	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:6119	6:391739-411447
+IRF7	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:6122	11:612553-615999
+IRF8	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:5358	16:85898803-85922609
+IRF9	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:6131	14:24161053-24166565
+ISG15	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:4053	1:1001138-1014541
+ITCH	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:13890	20:34363235-34511393
+ITGAL	0	BIALLELIC, autosomal or pseudoautosomal	HGNC:6148	16:30472658-30523185
+ITGAM	1	Unknown	HGNC:6149	16:31259990-31332892
+ITGAV	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:6150	2:186590065-186680901
+ITGB2	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:6155	21:44885953-44931989
+ITK	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:6171	5:157142933-157255191
+ITPKB	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:6179	1:226631690-226739323
+ITPR3	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:6182	6:33620365-33696574
+IVNS1ABP	2	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:16951	1:185296388-185317329
+JAGN1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:26926	3:9890554-9894349
+JAK1	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:6190	1:64833229-64966504
+JAK3	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:6193	19:17824780-17848071
+KARS	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:6215	16:75627474-75648643
+KCNA5	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:6224	12:5043989-5046788
+KDM6A	3	X-LINKED: hemizygous mutation in males, monoallelic mutations in females may cause disease (may be less severe, later onset than males)	HGNC:12637	X:44873177-45112602
+KMT2A	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:7132	11:118436490-118526832
+KMT2D	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:7133	12:49018975-49059774
+KRAS	2	Unknown	HGNC:6407	12:25204789-25250936
+LACC1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:26789	13:43879284-43893932
+LAMTOR2	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:29796	1:156054752-156058510
+LAT	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:18874	16:28984826-28990783
+LCK	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:6524	1:32251239-32286165
+LCP2	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:6529	5:170246237-170298227
+LIG1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:6598	19:48115445-48170603
+LIG4	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:6601	13:108207439-108218368
+LPIN2	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:14450	18:2916994-3013315
+LRBA	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1742	4:150264531-151015727
+LRRC32	1	Unknown	HGNC:4161	11:76657524-76670747
+LRRC8A	1	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:19027	9:128882112-128918039
+LSM11	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:30860	5:157743695-157760709
+LY9	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:6730	1:160796074-160828261
+LY96	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:17156	8:73991352-74029087
+LYN	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:6735	8:55879813-56014168
+LYST	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1968	1:235661041-235883640
+LYZ	1	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:6740	12:69348341-69354234
+MAGT1	3	X-LINKED: hemizygous mutation in males, biallelic mutations in females	HGNC:28880	X:77826364-77895593
+MALT1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:6819	18:58671386-58754477
+MAN2B2	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:29623	4:6575175-6623362
+MAP1LC3B2	1	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:34390	12:116548105-116576448
+MAP2K1	1	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:6840	15:66386817-66492312
+MAP3K14	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:6853	17:45263121-45317040
+MAP4K1	0	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:6863	19:38587641-38618882
+MAPK8	1	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:6881	10:48306639-48439360
+MASP1	1		HGNC:6901	3:187217285-187292022
+MASP2	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:6902	1:11026523-11047233
+MBL2	2	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:6922	10:52765380-52771700
+MCM10	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:18043	10:13161554-13211104
+MCM4	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:6947	8:47960185-47978160
+MCTS1	3	X-LINKED: hemizygous mutation in males, biallelic mutations in females	HGNC:23357	X:120594010-120621074
+MECOM	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:3498	3:169083499-169663618
+MED13L	1	Unknown	HGNC:22962	12:115953872-116277338
+MEFV	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:6998	16:3242028-3256627
+MICA	1	Unknown	HGNC:7090	6:31399784-31415315
+MKL1	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:14334	22:40410281-40636702
+MOGS	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:24862	2:74461057-74465410
+MPEG1	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:29619	11:59208510-59212951
+MPI	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:7216	15:74890005-74902219
+MPL	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:7217	1:43337849-43352772
+MPO	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:7218	17:58269856-58280935
+MR1	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:4975	1:181033425-181061938
+MRE11	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:7230	11:94415578-94493908
+MS4A1	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:7315	11:60455752-60470760
+MSH6	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:7329	2:47695530-47810101
+MSN	3	X-LINKED: hemizygous mutation in males, biallelic mutations in females	HGNC:7373	X:65588377-65741931
+MTHFD1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:7432	14:64388031-64463457
+MTPAP	1	Unknown	HGNC:25532	10:30309801-30374448
+MVK	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:7530	12:109573255-109598117
+MYB	2	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:7545	6:135181315-135219173
+MYD88	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:7562	3:38138478-38143022
+MYO5B	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:7603	18:49822813-50195093
+MYOF	1	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:3656	10:93306429-93482317
+MYSM1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:29401	1:58654739-58700092
+NBAS	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:15625	2:15166909-15561330
+NBN	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:7652	8:89933336-90003228
+NCF1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:7660	7:74773962-74789315
+NCF2	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:7661	1:183555563-183590876
+NCF4	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:7662	22:36860988-36878015
+NCKAP1L	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:4862	12:54497711-54548238
+NCSTN	2	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:17091	1:160343272-160358952
+NFAT5	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:7774	16:69565094-69704666
+NFATC1	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:7775	18:79395856-79529325
+NFATC2	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:7776	20:51386957-51562831
+NFE2L2	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:7782	2:177227595-177392697
+NFKB1	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:7794	4:102501329-102617302
+NFKB2	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:7795	10:102394110-102402529
+NFKBIA	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:7797	14:35401511-35404749
+NFKBID	1		HGNC:15671	19:35887653-35902303
+NHEJ1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:25737	2:219075317-219160865
+NHP2	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:14377	5:178149460-178153967
+NLRC4	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:16412	2:32224453-32265854
+NLRP1	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:14374	17:5499427-5619424
+NLRP12	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:22938	19:53793603-53824394
+NLRP3	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:16400	1:247416156-247449108
+NOD2	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:5331	16:50693603-50734041
+NOP10	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:14378	15:34341713-34343177
+NOS2	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:7873	17:27756766-27800499
+NOX1	2	X-LINKED: hemizygous mutation in males, monoallelic mutations in females may cause disease (may be less severe, later onset than males)	HGNC:7889	X:100843324-100874345
+NPC1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:7897	18:23506184-23586898
+NRAS	2	Other - please specifiy in evaluation comments	HGNC:7989	1:114704469-114716894
+NSMCE3	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:7677	15:29264992-29269829
+NUDCD3	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:22208	7:44379121-44490880
+OAS1	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:8086	12:112906777-112933222
+ODC1	1	Unknown	HGNC:8109	2:10439968-10448504
+ORAI1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:25896	12:121626550-121642677
+OSM	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:8506	22:30262829-30266840
+OSMR	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:8507	5:38845858-38945596
+OSTM1	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:21652	6:108041409-108165854
+OTULIN	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:25118	5:14664664-14699711
+PARN	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:8609	16:14435701-14632728
+PARP1	1	Unknown	HGNC:270	1:226360691-226408079
+PAX1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:8615	20:21705659-21718486
+PAX5	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:8619	9:36833275-37034185
+PDCD1	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:8760	2:241849881-241858908
+PEPD	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:8840	19:33386950-33521794
+PGM3	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:8907	6:83161150-83193936
+PI4KA	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:8983	22:20707691-20859417
+PIK3CD	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:8977	1:9651732-9729114
+PIK3CG	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:8978	7:106865278-106907145
+PIK3R1	3	BOTH monoallelic and biallelic (but BIALLELIC mutations cause a more SEVERE disease form), autosomal or pseudoautosomal	HGNC:8979	5:68215720-68301821
+PLCG1	2	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:9065	20:41136960-41196801
+PLCG2	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:9066	16:81739097-81962693
+PLD4	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:23792	14:104924816-104937790
+PLEKHM1	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:29017	17:45435900-45490749
+PLG	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:9071	6:160702238-160753315
+PMS2	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:9122	7:5973239-6009125
+PNP	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:7892	14:20468954-20477094
+POLA1	3	X-LINKED: hemizygous mutation in males, biallelic mutations in females	HGNC:9173	X:24693919-24996986
+POLD1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:9175	19:50384204-50418018
+POLD2	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:9176	7:44114681-44124358
+POLD3	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:20932	11:74493851-74669117
+POLE	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:9177	12:132623753-132687365
+POLE2	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:9178	14:49643555-49688422
+POLR3A	2	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:30074	10:77969251-78029545
+POLR3C	2	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:30076	1:145824088-145842505
+POLR3F	1	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:15763	20:18467127-18484643
+POMP	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:20330	13:28659104-28678925
+POU2AF1	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:9211	11:111352252-111455630
+PRF1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:9360	10:70597348-70602775
+PRIM1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:9369	12:56731596-56752373
+PRKCD	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:9399	3:53156009-53192717
+PRKDC	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:9413	8:47773108-47960183
+PSEN1	1	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:9508	14:73136418-73223691
+PSENEN	2	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:30100	19:35745114-35747519
+PSMA3	2		HGNC:9532	14:58244831-58272012
+PSMB10	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:9538	16:67934502-67937087
+PSMB4	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:9541	1:151399534-151401944
+PSMB8	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:9545	6:32840717-32844703
+PSMB9	2	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:9546	6:32844136-32859585
+PSMG2	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:24929	18:12658043-12725740
+PSTPIP1	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:9580	15:76993359-77037332
+PTCRA	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:21290	6:42915989-42925835
+PTEN	2	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:9588	10:87863113-87971930
+PTPN1	1	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:9642	20:50510321-50585241
+PTPN2	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:9650	18:12785478-12929643
+PTPN22	1	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:9652	1:113813811-113871759
+PTPN6	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:9658	12:6946468-6961316
+PTPRC	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:9666	1:198638671-198757283
+QSOX2	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:30249	9:136206333-136245841
+RAB27A	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:9766	15:55202966-55319113
+RAC2	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:9802	22:37225261-37244448
+RAD50	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:9816	5:132556019-132646344
+RAG1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:9831	11:36510709-36593156
+RAG2	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:9832	11:36575574-36598279
+RANBP2	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:9848	2:108719481-108785811
+RAP1B	1	Other	HGNC:9857	12:68610839-68671901
+RASGRP1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:9878	15:38488103-38565575
+RBCK1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:15864	20:407498-430966
+RC3H1	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:29434	1:173931214-174022297
+RECQL4	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:9949	8:144511288-144517845
+REL	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:9954	2:60881521-60931610
+RELA	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:9955	11:65653596-65663094
+RELB	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:9956	19:45001430-45038198
+RELN	1	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:9957	7:103471784-103989516
+RET	1	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:9967	10:43077027-43130351
+REXO2	2	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:17851	11:114439386-114450279
+RFX5	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:9986	1:151340640-151347357
+RFXANK	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:9987	19:19192229-19201869
+RFXAP	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:9988	13:36819224-36829104
+RGS10	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:9992	10:119499828-119542708
+RHBDF2	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:20788	17:76470891-76501790
+RHOG	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:672	11:3826978-3840983
+RHOH	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:686	4:40191053-40246967
+RIPK1	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:10019	6:3063991-3115187
+RMRP	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:10031	9:35657751-35658018
+RNASEH2A	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:18518	19:12802063-12813638
+RNASEH2B	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:25671	13:50909678-50973745
+RNASEH2C	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:24116	11:65714896-65720947
+RNF168	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:26661	3:196468783-196503768
+RNF31	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:16031	14:24146683-24160661
+RNU4ATAC	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:34016	2:121530881-121531007
+RNU6ATAC	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:34017	9:134164439-134164564
+RNU7-1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:34033	12:6943816-6943878
+RORC	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:10260	1:151806071-151831872
+RPSA	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:6502	3:39406689-39412542
+RTEL1	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:15888	20:63657810-63696253
+SAMD3	1	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:21574	6:130144315-130365425
+SAMD9	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:1348	7:93099513-93118023
+SAMD9L	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:1349	7:93130055-93148369
+SAMHD1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:15925	20:36890229-36951843
+SART3	1	Unknown	HGNC:16860	12:108522580-108561400
+SASH3	3	X-LINKED: hemizygous mutation in males, biallelic mutations in females	HGNC:15975	X:129779979-129795201
+SAT1	1	X-LINKED: hemizygous mutation in males, biallelic mutations in females	HGNC:10540	X:23783173-23786226
+SBDS	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:19440	7:66987677-66995601
+SCGN	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:16941	6:25652201-25701783
+SEC61A1	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:18276	3:128051641-128071683
+SEMA3E	1	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:10727	7:83363906-83649010
+SENP7	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:30402	3:101324205-101513241
+SEPT6	2	X-LINKED: hemizygous mutation in males, biallelic mutations in females	HGNC:15848	X:119615724-119693370
+SERPING1	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:1228	11:57597387-57614853
+SGPL1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:10817	10:70815961-70881173
+SH2B3	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:29605	12:111405948-111451623
+SH2D1A	3	X-LINKED: hemizygous mutation in males, biallelic mutations in females	HGNC:10820	X:124227868-124373197
+SH3BP2	1	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:10825	4:2793023-2841098
+SH3GL1	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:10830	19:4360370-4400547
+SH3KBP1	1	X-LINKED: hemizygous mutation in males, biallelic mutations in females	HGNC:13867	X:19533975-19887601
+SHARPIN	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:25321	8:144098633-144108124
+SIRT1	1	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:14929	10:67884669-67918390
+SIT1	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:17710	9:35649295-35650950
+SKIV2L	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:10898	6:31959080-31969755
+SLC13A4	1	Unknown	HGNC:15827	7:135681237-135729258
+SLC19A1	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:10937	21:45493572-45544411
+SLC29A3	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:23096	10:71319258-71363385
+SLC30A2	2	BOTH monoallelic and biallelic (but BIALLELIC mutations cause a more SEVERE disease form), autosomal or pseudoautosomal	HGNC:11013	1:26037252-26046133
+SLC35A1	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:11021	6:87470623-87512336
+SLC35C1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:20197	11:45804072-45813015
+SLC37A4	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:4061	11:119024114-119030906
+SLC39A4	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:17129	8:144409742-144416895
+SLC39A7	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:4927	6:33200445-33204439
+SLC46A1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:30521	17:28394756-28407197
+SLC7A7	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:11065	14:22773222-22829820
+SLC9A3	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:11073	5:473310-524332
+SLCO2A1	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:10955	3:133932696-134052184
+SMARCAL1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:11102	2:216412414-216483053
+SMARCD2	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:11107	17:63832081-63843065
+SNORA31	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:32621	13:45337480-45337609
+SNX10	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:14974	7:26291895-26374329
+SOCS1	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:19383	16:11254405-11256179
+SP110	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:5401	2:230167293-230225729
+SPI1	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:11241	11:47354860-47378576
+SPINK5	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:15464	5:148025683-148137289
+SPPL2A	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:30227	15:50702266-50765808
+SRP54	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:11301	14:34981957-35029567
+SRP72	2	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:11303	4:56466915-56503680
+STAT1	3	BOTH monoallelic and biallelic (but BIALLELIC mutations cause a more SEVERE disease form), autosomal or pseudoautosomal	HGNC:11362	2:190964358-191020960
+STAT2	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:11363	12:56341597-56360155
+STAT3	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:11364	17:42313324-42388568
+STAT4	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:11365	2:191029576-191151596
+STAT5A	1	Unknown	HGNC:11366	17:42287547-42311943
+STAT5B	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:11367	17:42199168-42276707
+STAT6	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:11368	12:57095408-57132139
+STIM1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:11386	11:3854527-4093210
+STK4	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:11408	20:44966474-45079959
+STN1	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:26200	10:103882542-103918205
+STX11	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:11429	6:144150526-144188370
+STXBP2	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:11445	19:7636881-7647873
+STXBP3	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:11446	1:108746674-108809526
+SYK	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:11491	9:90801787-90898549
+TAP1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:43	6:32845209-32853978
+TAP2	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:44	6:32821833-32838780
+TAPBP	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:11566	6:33299694-33314387
+TAZ	3	X-LINKED: hemizygous mutation in males, biallelic mutations in females	HGNC:11577	X:154411518-154421726
+TBK1	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:11584	12:64451880-64502108
+TBX1	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:11592	22:19756703-19783593
+TBX21	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:11599	17:47733244-47746119
+TCF3	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:11633	19:1609290-1652605
+TCIRG1	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:11647	11:68039016-68050895
+TCN2	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:11653	22:30606838-30627278
+TERC	2	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:11727	3:169764520-169765060
+TERT	2	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:11730	5:1253147-1295069
+TET2	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:25941	4:105145875-105279816
+TFRC	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:11763	3:196027183-196082189
+TGFB1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:11766	19:41301587-41353911
+TGFBR1	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:11772	9:99104038-99154192
+TGFBR2	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:11773	3:30606502-30694142
+THBD	1	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:11784	20:23045633-23049741
+TICAM1	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:18348	19:4815932-4831704
+TINF2	2	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:11824	14:24239643-24242674
+TIRAP	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:17192	11:126283065-126298845
+TKFC	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:24552	11:61333210-61353295
+TLN1	1	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:11845	9:35696948-35732395
+TLR3	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:11849	4:186069152-186088069
+TLR7	3	X-LINKED: hemizygous mutation in males, monoallelic mutations in females may cause disease (may be less severe, later onset than males)	HGNC:15631	X:12867083-12890380
+TLR8	3	X-LINKED: hemizygous mutation in males, monoallelic mutations in females may cause disease (may be less severe, later onset than males)	HGNC:15632	X:12906620-12923169
+TMC6	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:18021	17:78110458-78132407
+TMC8	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:20474	17:78130770-78142968
+TMEFF1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:11866	9:100473113-100577636
+TMEM173	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:27962	5:139475534-139482935
+TNFAIP3	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:11896	6:137867188-137883312
+TNFRSF11A	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:11908	18:62325287-62391292
+TNFRSF13B	1	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:18153	17:16929816-16972118
+TNFRSF13C	2	BIALLELIC, autosomal or pseudoautosomal	HGNC:17755	22:41922023-41926818
+TNFRSF1A	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:11916	12:6328757-6342114
+TNFRSF4	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:11918	1:1211326-1214138
+TNFRSF9	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:11924	1:7915894-7943165
+TNFSF11	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:11926	13:42562736-42608013
+TNFSF12	1	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:11927	17:7548891-7557890
+TNFSF13	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:11928	17:7558292-7561608
+TNFSF9	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:11939	19:6530999-6535928
+TNIP1	1	Unknown	HGNC:16903	5:151029945-151093577
+TOM1	1	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:11982	22:35299275-35347994
+TOP2B	3	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:11990	3:25597905-25664907
+TPP2	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:12016	13:102597003-102679958
+TRAC	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:12029	14:22547506-22552154
+TRAF3	3	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:12033	14:102777476-102911500
+TRAF3IP2	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:1343	6:111556454-111606278
+TREX1	3	BOTH monoallelic and biallelic, autosomal or pseudoautosomal	HGNC:12269	3:48465811-48467645
+TRIM22	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:16379	11:5689689-5737089
+TRNT1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:17341	3:3126916-3150879
+TSPAN14	1	Unknown	HGNC:23303	10:80454166-80533123
+TTC37	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:23639	5:95463895-95555007
+TTC7A	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:19750	2:46916157-47076137
+TUBGCP3	1	Unknown	HGNC:18598	13:112485005-112588167
+TYK2	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:12440	19:10350529-10380676
+UBA1	1	Other	HGNC:12469	X:47190861-47215128
+UNC119	1	MONOALLELIC, autosomal or pseudoautosomal, imprinted status unknown	HGNC:12565	17:28546707-28552668
+UNC13D	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:23147	17:75827225-75844717
+UNC93B1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:13481	11:67991104-68004982
+UNG	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:12572	12:109097574-109110992
+USB1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:25792	16:57999546-58021618
+USP18	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:12616	22:18149899-18177397
+VPS13B	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:2183	8:99013266-99877580
+VPS45	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:14579	1:150067293-150145327
+WAS	3	X-LINKED: hemizygous mutation in males, biallelic mutations in females	HGNC:12731	X:48676596-48691427
+WDR1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:12754	4:10074339-10116949
+WIPF1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:12736	2:174559572-174682916
+WRAP53	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:25522	17:7686071-7703502
+XIAP	3	X-LINKED: hemizygous mutation in males, monoallelic mutations in females may cause disease (may be less severe, later onset than males)	HGNC:592	X:123859724-123913979
+ZAP70	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:12858	2:97713560-97739862
+ZBTB24	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:21143	6:109462594-109483237
+ZBTB7B	2	MONOALLELIC, autosomal or pseudoautosomal, NOT imprinted	HGNC:18668	1:155002630-155018522
+ZC3HC1	1	Unknown	HGNC:29913	7:130018286-130051451
+ZFP36	1	Unknown	HGNC:12862	19:39406813-39409412
+ZNF34	1	Unknown	HGNC:13098	8:144773114-144787345
+ZNF341	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:15992	20:33731657-33792269
+ZNF699	1	BIALLELIC, autosomal or pseudoautosomal	HGNC:24750	19:9294275-9309838
+ZNFX1	3	BIALLELIC, autosomal or pseudoautosomal	HGNC:29271	20:49237946-49278426

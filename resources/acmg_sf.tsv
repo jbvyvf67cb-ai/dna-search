@@ -1,0 +1,87 @@
+## ACMG SF v3.3 (Lee et al., Genet Med 2025;27(8):101454, doi:10.1016/j.gim.2025.101454), Table 1.
+## min_alleles: P/LP alleles required in the proband (hemizygous/homozygous count as 2). special: extra rule applied by dnasearch.
+symbol	category	inheritance	report_rule	min_alleles	special
+APC	Cancer Predisposition	AD	All P and LP	1	
+RET	Cancer Predisposition	AD	All P and LP	1	
+BRCA1	Cancer Predisposition	AD	All P and LP	1	
+BRCA2	Cancer Predisposition	AD	All P and LP	1	
+PALB2	Cancer Predisposition	AD	All P and LP	1	
+SDHD	Cancer Predisposition	AD	All P and LP	1	
+SDHAF2	Cancer Predisposition	AD	All P and LP	1	
+SDHC	Cancer Predisposition	AD	All P and LP	1	
+SDHB	Cancer Predisposition	AD	All P and LP	1	
+MAX	Cancer Predisposition	AD	All P and LP	1	
+TMEM127	Cancer Predisposition	AD	All P and LP	1	
+BMPR1A	Cancer Predisposition	AD	All P and LP	1	
+SMAD4	Cancer Predisposition	AD	All P and LP	1	
+TP53	Cancer Predisposition	AD	All P and LP	1	
+MLH1	Cancer Predisposition	AD	All P and LP	1	
+MSH2	Cancer Predisposition	AD	All P and LP	1	
+MSH6	Cancer Predisposition	AD	All P and LP	1	
+PMS2	Cancer Predisposition	AD	All P and LP	1	
+MEN1	Cancer Predisposition	AD	All P and LP	1	
+MUTYH	Cancer Predisposition	AR	P and LP (2 variants)	2	
+NF2	Cancer Predisposition	AD	All P and LP	1	
+STK11	Cancer Predisposition	AD	All P and LP	1	
+PTEN	Cancer Predisposition	AD	All P and LP	1	
+RB1	Cancer Predisposition	AD	All P and LP	1	
+TSC1	Cancer Predisposition	AD	All P and LP	1	
+TSC2	Cancer Predisposition	AD	All P and LP	1	
+VHL	Cancer Predisposition	AD	All P and LP	1	
+WT1	Cancer Predisposition	AD	All P and LP	1	
+FBN1	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+TGFBR1	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+TGFBR2	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+SMAD3	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+ACTA2	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+MYH11	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+PKP2	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+DSP	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+DSC2	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+TMEM43	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+DSG2	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+RYR2	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+CASQ2	Cardiovascular Disease Predisposition	AR	P and LP (2 variants)	2	
+TRDN	Cardiovascular Disease Predisposition	AR	P and LP (2 variants)	2	
+TNNT2	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+LMNA	Cardiovascular Disease Predisposition	AD	All P and LP (see text: only variants with case-level evidence of cardiac disease)	1	needs_case_review
+FLNC	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+TTN	Cardiovascular Disease Predisposition	AD	All P and LP (truncating variants only)	1	lof_only
+BAG3	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+DES	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+RBM20	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+TNNC1	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+PLN	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+COL3A1	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+LDLR	Cardiovascular Disease Predisposition	SD	All P and LP	1	
+APOB	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+PCSK9	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+MYH7	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+MYBPC3	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+TNNI3	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+TPM1	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+MYL3	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+ACTC1	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+PRKAG2	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+MYL2	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+KCNQ1	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+KCNH2	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+SCN5A	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+CALM1	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+CALM2	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+CALM3	Cardiovascular Disease Predisposition	AD	All P and LP	1	
+BTD	Inborn Errors of Metabolism	AR	P and LP (2 variants)	2	
+CYP27A1	Inborn Errors of Metabolism	AR	P and LP (2 variants)	2	
+GLA	Inborn Errors of Metabolism	XL	All hemi, het, homozygous P and LP	1	
+HFE	Inborn Errors of Metabolism	AR	HFE p.C282Y homozygotes only	1	homozygous_only
+OTC	Inborn Errors of Metabolism	XL	All hemi, het, homozygous P and LP	1	
+GAA	Inborn Errors of Metabolism	AR	P and LP (2 variants)	2	
+ABCD1	Inborn Errors of Metabolism	XL	All hemi, homozygous or two het P and/or LP	2	
+ACVRL1	Other Disease Phenotypes	AD	All P and LP	1	
+ENG	Other Disease Phenotypes	AD	All P and LP	1	
+TTR	Other Disease Phenotypes	AD	All P and LP	1	
+RYR1	Other Disease Phenotypes	AD	All P and LP	1	
+CACNA1S	Other Disease Phenotypes	AD	All P and LP	1	
+HNF1A	Other Disease Phenotypes	AD	All P and LP	1	
+RPE65	Other Disease Phenotypes	AR	P and LP (2 variants)	2	
+ATP7B	Other Disease Phenotypes	AR	P and LP (2 variants)	2	

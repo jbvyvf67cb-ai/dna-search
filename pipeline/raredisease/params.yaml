@@ -1,0 +1,44 @@
+# nf-core/raredisease 3.1.2 parameters for a 30x Illumina-type WGS singleton or trio.
+# Paths under /refs are placeholders: see pipeline/raredisease/README.md for how to build them.
+input: pipeline/raredisease/samplesheet.csv
+outdir: /data/results/raredisease
+
+genome: GRCh38
+analysis_type: wgs
+aligner: bwamem2
+variant_caller: deepvariant      # DeepVariant + GLnexus joint calling (what validation/ mirrors)
+
+fasta: /refs/GRCh38/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna
+fai: /refs/GRCh38/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.fai
+intervals_wgs: /refs/GRCh38/wgs_calling_regions.interval_list
+intervals_y: /refs/GRCh38/chrY.interval_list
+par_bed: /refs/GRCh38/par.bed
+known_dbsnp: /refs/GRCh38/dbsnp.vcf.gz
+known_dbsnp_tbi: /refs/GRCh38/dbsnp.vcf.gz.tbi
+
+# annotation
+vep_cache: /refs/vep_cache            # Ensembl VEP cache, version below
+vep_cache_version: 112
+vep_plugin_files: /refs/vep_plugin_files.csv   # SpliceAI, pLI, etc.
+gnomad_af: /refs/gnomad/gnomad_v4.af.tab.gz
+gnomad_af_idx: /refs/gnomad/gnomad_v4.af.tab.gz.tbi
+vcfanno_resources: /refs/vcfanno_resources.txt
+vcfanno_toml: /refs/vcfanno_config.toml
+cadd_resources: /refs/cadd/annotations
+cadd_prescored: /refs/cadd/prescored
+score_config_snv: /refs/rank_model_snv.ini
+score_config_sv: /refs/rank_model_sv.ini
+score_config_mt: /refs/rank_model_mt.ini
+variant_consequences_snv: /refs/variant_consequences_v2.txt
+variant_consequences_sv: /refs/variant_consequences_v2.txt
+reduced_penetrance: /refs/reduced_penetrance.tsv
+
+# structural variants, repeat expansions, mobile elements, mito
+svdb_query_dbs: /refs/svdb_query_vcf.csv
+variant_catalog: /refs/variant_catalog_grch38.json   # ExpansionHunter catalogue
+mobile_element_references: /refs/mobile_element_references.tsv
+mobile_element_svdb_annotations: /refs/svdb_query_me.csv
+mt_fasta: /refs/GRCh38/chrM.fa
+# gcnvcaller_model / ploidy_model / readcount_intervals need a panel of normals;
+# without them, skip GATK-gCNV and rely on CNVnator + TIDDIT + Manta:
+skip_tools: germlinecnvcaller,gens,peddy

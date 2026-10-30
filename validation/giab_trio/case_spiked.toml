@@ -1,0 +1,38 @@
+# GIAB Ashkenazi trio used as a stand-in family. These are healthy volunteers: HG002 is
+# labelled "affected" only to exercise the trio logic. Phenotype terms describe a
+# hypothetical X-linked agammaglobulinaemia-like presentation.
+[case]
+id = "giab_trio_spiked"
+proband = "HG002"
+hpo = [
+  "HP:0004432",  # Agammaglobulinemia
+  "HP:0002718",  # Recurrent bacterial infections
+  "HP:0002205",  # Recurrent respiratory infections
+]
+
+[[samples]]
+id = "HG002"
+sex = "male"
+affected = true
+father = "HG003"
+mother = "HG004"
+
+[[samples]]
+id = "HG003"
+sex = "male"
+affected = false
+
+[[samples]]
+id = "HG004"
+sex = "female"
+affected = false
+
+[resources]
+panels = [{ name = "PanelApp primary immunodeficiency (green)", path = "../../resources/panels/primary_immunodeficiency.tsv" }]
+hpo_dir = "../../resources/hpo"
+acmg_sf = "../../resources/acmg_sf.tsv"
+difficult_genes = "../../resources/difficult_genes.tsv"
+
+[report]
+secondary_findings = true
+carrier_status = true

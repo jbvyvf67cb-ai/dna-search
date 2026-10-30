@@ -1,0 +1,2 @@
+sample,lane,fastq_1,fastq_2,sex,phenotype,paternal_id,maternal_id,case_id
+ME,1,/data/me/ME_R1.fastq.gz,/data/me/ME_R2.fastq.gz,2,2,0,0,case1

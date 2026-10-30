@@ -1,0 +1,27 @@
+## Genes/loci that 30x short-read WGS with standard callers resolves poorly.
+## Curated list; a negative result in these genes is weak evidence. Extend as needed.
+symbol	issue	recommended_method
+NCF1	two near-identical pseudogenes (NCF1B, NCF1C); the common GT-deletion is shared with them	Paraphase (PacBio HiFi) or Parascopy; DHR flow assay; clinical NCF1 test
+IKBKG	duplicated pseudogene IKBKGP1; recurrent exon 4-10 deletion	long-range PCR / long reads; clinical IKBKG assay
+SMN1	near-identical SMN2	SMNCopyNumberCaller (short reads) or Paraphase
+CYP21A2	pseudogene CYP21A1P and gene conversions	Paraphase / long reads
+C4A	C4A/C4B copy-number variation in the RCCX module	CNV-aware genotyping (e.g. long reads, ddPCR)
+C4B	C4A/C4B copy-number variation in the RCCX module	CNV-aware genotyping (e.g. long reads, ddPCR)
+CFH	segmental duplication with CFHR1-5; hybrid genes and deletions	MLPA or long reads
+CFHR1	segmental duplication with CFH/CFHR genes; common CFHR3-CFHR1 deletion	MLPA or long reads
+FCGR2A	FCGR2/FCGR3 copy-number variable segmental duplication	targeted CNV assays / long reads
+FCGR2B	FCGR2/FCGR3 copy-number variable segmental duplication	targeted CNV assays / long reads
+FCGR3A	FCGR2/FCGR3 copy-number variable segmental duplication	targeted CNV assays / long reads
+FCGR3B	FCGR2/FCGR3 copy-number variable segmental duplication	targeted CNV assays / long reads
+PMS2	pseudogene PMS2CL	Paraphase / clinical PMS2 assay
+GBA1	pseudogene GBAP1	Paraphase / Gauchian
+HBA1	HBA1/HBA2 duplication; common deletions	Paraphase / clinical alpha-thalassaemia assay
+HBA2	HBA1/HBA2 duplication; common deletions	Paraphase / clinical alpha-thalassaemia assay
+CORO1A	sits in the recurrent 16p11.2 deletion region (segmental duplications)	CNV calling + clinical confirmation
+TBX1	22q11.2 deletion syndrome (DiGeorge) is a ~3 Mb CNV, not a small variant	CNV calling (CNVnator/GATK-gCNV) or chromosomal microarray
+UBA1	VEXAS is somatic (acquired in blood); germline callers miss low-fraction variants	somatic-mode calling (Mutect2), deeper sequencing, clinical VEXAS test
+HLA-A	extreme polymorphism; reference bias	HLA typing (T1K, HLA-HD, OptiType)
+HLA-B	extreme polymorphism; reference bias	HLA typing (T1K, HLA-HD, OptiType)
+HLA-C	extreme polymorphism; reference bias	HLA typing (T1K, HLA-HD, OptiType)
+HLA-DRB1	extreme polymorphism; reference bias	HLA typing (T1K, HLA-HD)
+KIR2DL1	KIR haplotype copy-number variation	KIR typing (T1K)
