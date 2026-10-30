@@ -122,31 +122,39 @@ stage_annotate() {
     run "$SAMTOOLS" sh -c "bgzip -f $A/genes.gff3 && tabix -p gff $A/genes.gff3.gz"
     rm -f "$A/genes.raw.gff3.gz"
   fi
-  if [[ ! -s $A/gnomad.tsv.gz.tbi ]]; then
-    # gnomAD v4.1 genomes allele frequencies, fetched only for this trio's variant sites
-    log "gnomAD v4.1 frequencies for trio sites (remote, by chromosome)"
-    run "$BCFTOOLS" sh -c "bcftools query -f '%CHROM\t%POS\n' $WORK/trio.vcf.gz | sort -u > $A/sites.tsv"
-    : > "$A/gnomad.tsv"
-    for c in $(cut -f1 "$A/sites.tsv" | sort -u); do
-      grep -P "^$c\t" "$A/sites.tsv" > "$A/sites.$c.tsv"
-      run "$BCFTOOLS" bcftools query -T "$A/sites.$c.tsv" -f '%CHROM\t%POS\t%REF\t%ALT\t%AF\t%AF_grpmax\n' \
-        "$GNOMAD.$c.vcf.bgz" >> "$A/gnomad.tsv" || log "WARN gnomAD fetch failed for $c"
-      rm -f "$A/sites.$c.tsv"
-    done
-    run "$SAMTOOLS" sh -c "sort -k1,1V -k2,2n $A/gnomad.tsv | bgzip > $A/gnomad.tsv.gz && tabix -s1 -b2 -e2 $A/gnomad.tsv.gz"
-  fi
 }
 
-annotate_vcf() {  # annotate_vcf in.vcf.gz out.vcf.gz
-  local in=$1 out=$2 A="$WORK/annot"
-  printf '##INFO=<ID=gnomAD_AF,Number=A,Type=Float,Description="gnomAD v4.1 genomes AF">\n##INFO=<ID=gnomAD_AF_grpmax,Number=A,Type=Float,Description="gnomAD v4.1 genomes grpmax AF">\n' > "$A/gnomad.hdr"
-  run "$BCFTOOLS" sh -c "bcftools annotate -a $A/gnomad.tsv.gz -c CHROM,POS,REF,ALT,gnomAD_AF,gnomAD_AF_grpmax -h $A/gnomad.hdr $in \
-      | bcftools annotate -a $A/clinvar.vcf.gz -c INFO/CLNSIG,INFO/CLNREVSTAT -Oz -o ${out%.vcf.gz}.pre.vcf.gz"
+# gnomAD v4.1 genome frequencies are fetched remotely by index (-R), only for sites that
+# survive the consequence filter, so a run downloads megabytes rather than the ~700 GB release.
+fetch_gnomad() {  # fetch_gnomad sites.tsv  (CHROM<TAB>POS); appends to the shared cache
+  local sites=$1 A="$WORK/annot"
+  touch "$A/gnomad.cache.tsv" "$A/gnomad.queried.tsv"
+  LC_ALL=C comm -23 <(LC_ALL=C sort -u "$sites") <(LC_ALL=C sort -u "$A/gnomad.queried.tsv") \
+    | sort -k1,1 -k2,2n > "$A/q.new.tsv"
+  log "gnomAD v4.1: $(wc -l < "$A/q.new.tsv") new sites to look up"
+  for c in $(cut -f1 "$A/q.new.tsv" | sort -u); do
+    awk -v c="$c" '$1==c' "$A/q.new.tsv" > "$A/q.$c.tsv"
+    run "$BCFTOOLS" bcftools query -R "$A/q.$c.tsv" -f '%CHROM\t%POS\t%REF\t%ALT\t%AF\t%AF_grpmax\n' \
+      "$GNOMAD.$c.vcf.bgz" >> "$A/gnomad.cache.tsv" || { log "WARN gnomAD fetch failed for $c"; continue; }
+    cat "$A/q.$c.tsv" >> "$A/gnomad.queried.tsv"
+  done
+  rm -f "$A"/q.*.tsv
+  sort -u "$A/gnomad.cache.tsv" | sort -k1,1V -k2,2n > "$A/gnomad.tsv"
+  run "$SAMTOOLS" sh -c "bgzip -f $A/gnomad.tsv && tabix -f -s1 -b2 -e2 $A/gnomad.tsv.gz"
+}
+
+annotate_vcf() {  # annotate_vcf in.vcf.gz out.vcf.gz   (ClinVar -> VEP -> gnomAD)
+  local in=$1 out=$2 A="$WORK/annot" base=${2%.vcf.gz}
+  run "$BCFTOOLS" sh -c "bcftools annotate -a $A/clinvar.vcf.gz -c INFO/CLNSIG,INFO/CLNREVSTAT $in -Oz -o $base.cv.vcf.gz"
   run "$VEP" vep --offline --format vcf --vcf --force_overwrite --no_stats --fork "$THREADS" \
-    -i "${out%.vcf.gz}.pre.vcf.gz" -o "$out" --compress_output bgzip \
+    -i "$base.cv.vcf.gz" -o "$base.vep.vcf.gz" --compress_output bgzip \
     --fasta "$REF" --gff "$A/genes.gff3.gz" --symbol --hgvs --canonical --allele_number \
     --fields "Allele,ALLELE_NUM,Consequence,IMPACT,SYMBOL,Gene,Feature,CANONICAL,HGVSc,HGVSp"
-  rm -f "${out%.vcf.gz}.pre.vcf.gz"
+  run "$BCFTOOLS" sh -c "bcftools query -i 'INFO/CSQ~\"missense|stop_gained|frameshift|splice_|start_lost|stop_lost|inframe_|protein_altering\" || INFO/CLNSIG!=\".\"' -f '%CHROM\t%POS\n' $base.vep.vcf.gz" > "$base.sites.tsv"
+  fetch_gnomad "$base.sites.tsv"
+  printf '##INFO=<ID=gnomAD_AF,Number=A,Type=Float,Description="gnomAD v4.1 genomes AF">\n##INFO=<ID=gnomAD_AF_grpmax,Number=A,Type=Float,Description="gnomAD v4.1 genomes grpmax AF">\n' > "$A/gnomad.hdr"
+  run "$BCFTOOLS" sh -c "bcftools annotate -a $A/gnomad.tsv.gz -c CHROM,POS,REF,ALT,gnomAD_AF,gnomAD_AF_grpmax -h $A/gnomad.hdr $base.vep.vcf.gz -Oz -o $out"
+  rm -f "$base.cv.vcf.gz" "$base.vep.vcf.gz" "$base.sites.tsv"
 }
 
 stage_spike() {
@@ -156,16 +164,6 @@ stage_spike() {
     --out "$WORK/trio.spiked.unsorted.vcf" --truth "$WORK/spike_truth.tsv"
   run "$BCFTOOLS" sh -c "bcftools sort $WORK/trio.spiked.unsorted.vcf -Oz -o $WORK/trio.spiked.vcf.gz && bcftools index -t $WORK/trio.spiked.vcf.gz"
   rm -f "$WORK/trio.spiked.unsorted.vcf"
-  # spiked sites need gnomAD too; refresh the frequency table with them
-  run "$BCFTOOLS" sh -c "bcftools query -f '%CHROM\t%POS\n' -i 'INFO/SPIKE=1' $WORK/trio.spiked.vcf.gz" > "$WORK/annot/spike_sites.tsv"
-  for c in $(cut -f1 "$WORK/annot/spike_sites.tsv" | sort -u); do
-    grep -P "^$c\t" "$WORK/annot/spike_sites.tsv" > "$WORK/annot/s.$c.tsv"
-    run "$BCFTOOLS" bcftools query -T "$WORK/annot/s.$c.tsv" -f '%CHROM\t%POS\t%REF\t%ALT\t%AF\t%AF_grpmax\n' "$GNOMAD.$c.vcf.bgz" >> "$WORK/annot/gnomad.extra.tsv" || true
-    rm -f "$WORK/annot/s.$c.tsv"
-  done
-  if [[ -s $WORK/annot/gnomad.extra.tsv ]]; then
-    run "$SAMTOOLS" sh -c "(bgzip -dc $WORK/annot/gnomad.tsv.gz; cat $WORK/annot/gnomad.extra.tsv) | sort -u | sort -k1,1V -k2,2n | bgzip > $WORK/annot/g2.tsv.gz && mv $WORK/annot/g2.tsv.gz $WORK/annot/gnomad.tsv.gz && tabix -f -s1 -b2 -e2 $WORK/annot/gnomad.tsv.gz"
-  fi
 }
 
 stage_report() {
