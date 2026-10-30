@@ -60,6 +60,7 @@ stage_slice() {
     run "$SAMTOOLS" samtools view -@ "$THREADS" -b -M -L "$BED" -o "$out" "$BAM_BASE/$s.novaseq.pcr-free.30x.dedup.grch38.bam"
     run "$SAMTOOLS" samtools index "$out"
   done
+  rm -f "$WORK"/*.dedup.grch38.bam.bai  # remote indexes samtools caches in the cwd
 }
 
 stage_call() {
