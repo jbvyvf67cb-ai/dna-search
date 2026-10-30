@@ -7,7 +7,7 @@ lightweight validation annotation), so each fact is looked up from a list of
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 from .vcf import Variant
 
@@ -39,6 +39,8 @@ DEFAULT_SOURCES = {
     "af": ["INFO:gnomAD_AF_grpmax", "INFO:gnomAD_AF", "INFO:GNOMADAF_popmax",
            "INFO:GNOMADAF", "CSQ:gnomADg_AF", "CSQ:gnomAD_AF", "CSQ:MAX_AF"],
     "clinvar": ["INFO:CLNSIG", "INFO:CLNSIG_MOD", "CSQ:ClinVar_CLNSIG", "CSQ:CLIN_SIG"],
+    # ClinVar GENEINFO ("SYMBOL:id|SYMBOL:id"): which gene(s) a ClinVar assertion is about
+    "clinvar_gene": ["INFO:GENEINFO", "CSQ:ClinVar_GENEINFO"],
     "spliceai": ["CSQ:SpliceAI_pred_DS_max", "INFO:SpliceAI_DS_max"],
     "cadd": ["INFO:CADD", "CSQ:CADD_PHRED"],
 }
@@ -62,6 +64,11 @@ class Annotated:
     clinvar: str
     spliceai: float | None
     cadd: float | None
+    clinvar_genes: set[str] = field(default_factory=set)
+
+    def clinvar_applies_to(self, gene: str) -> bool:
+        """ClinVar evidence counts for a gene only if ClinVar names it (when it names any)."""
+        return not self.clinvar_genes or gene in self.clinvar_genes
 
     @property
     def clinvar_pathogenic(self) -> bool:
@@ -130,6 +137,8 @@ def annotate(v: Variant, sources: dict[str, list[str]] | None = None) -> Annotat
                 or (_RANK[eff.effect_class] == _RANK[prev.effect_class] and canonical)):
             per_gene[gene] = eff
     clin = _lookup(v, src["clinvar"])
+    cv_genes = {g.split(":")[0] for raw in _lookup(v, src["clinvar_gene"])
+                for g in raw.replace("&", "|").split("|") if g}
     return Annotated(
         variant=v,
         effects=list(per_gene.values()),
@@ -137,4 +146,5 @@ def annotate(v: Variant, sources: dict[str, list[str]] | None = None) -> Annotat
         clinvar=clin[0] if clin else "",
         spliceai=_max_float(_lookup(v, src["spliceai"])),
         cadd=_max_float(_lookup(v, src["cadd"])),
+        clinvar_genes=cv_genes,
     )

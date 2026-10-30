@@ -23,6 +23,7 @@ HEADER = textwrap.dedent(f"""\
     ##INFO=<ID=CSQ,Number=.,Type=String,Description="Consequence annotations from Ensembl VEP. Format: {CSQ_FMT}">
     ##INFO=<ID=gnomAD_AF,Number=A,Type=Float,Description="af">
     ##INFO=<ID=CLNSIG,Number=.,Type=String,Description="clinvar">
+    ##INFO=<ID=GENEINFO,Number=1,Type=String,Description="clinvar gene">
     #CHROM\tPOS\tID\tREF\tALT\tQUAL\tFILTER\tINFO\tFORMAT\tKID\tDAD\tMOM
     """)
 
@@ -189,3 +190,53 @@ def test_secondary_findings_rules(tmp_path):
     case = triage.load_case(str(tmp_path / "case.toml"))
     res = triage.run(case, str(tmp_path / "t.vcf"))
     assert [f.gene for f in res.secondary] == ["BRCA2"]
+
+
+def _run(tmp_path, recs, panel=PANEL, case=CASE):
+    (tmp_path / "t.vcf").write_text(HEADER + "\n".join(recs) + "\n")
+    (tmp_path / "panel.tsv").write_text(panel)
+    (tmp_path / "case.toml").write_text(case)
+    c = triage.load_case(str(tmp_path / "case.toml"))
+    return triage.run(c, str(tmp_path / "t.vcf"))
+
+
+def test_neighbouring_gene_does_not_borrow_evidence(tmp_path):
+    # paternal + maternal ClinVar P variants in ARGENE that are only "downstream" of ARGENE2,
+    # plus a paternal variant in ARGENE2: ARGENE2 must not be called compound het
+    down = "downstream_gene_variant"
+    recs = [
+        rec("chr2", 100, "A", "T", ["0/1", "0/1", "0/0"],
+            f"CLNSIG=Pathogenic;CSQ={csq('ARGENE', 'stop_gained')},{csq('ARGENE2', down)}"),
+        rec("chr2", 200, "A", "T", ["0/1", "0/0", "0/1"],
+            f"CLNSIG=Pathogenic;CSQ={csq('ARGENE', 'missense_variant')},{csq('ARGENE2', down)}"),
+        rec("chr2", 900, "A", "T", ["0/1", "0/1", "0/0"],
+            f"CLNSIG=Pathogenic;CSQ={csq('ARGENE2', 'missense_variant')},{csq('ARGENE', down)}"),
+    ]
+    g = by_gene(_run(tmp_path, recs))
+    assert ("1", inh.COMPHET) in g["ARGENE"]
+    assert "ARGENE2" not in g
+
+
+def test_unaffected_parent_evidence_against(tmp_path):
+    recs = [
+        # LoF het in proband, unaffected father homozygous: not dominant
+        rec("chr1", 100, "A", "T", ["0/1", "1/1", "0/1"], f"CSQ={csq('ADGENE', 'frameshift_variant')}"),
+        # two hets in an AR gene, unaffected father carries both: not a compound het
+        rec("chr2", 100, "A", "T", ["0/1", "0/1", "0/1"], f"CSQ={csq('ARGENE', 'stop_gained')}"),
+        rec("chr2", 200, "A", "T", ["0/1", "0/1", "0/0"], f"CSQ={csq('ARGENE', 'stop_gained')}"),
+    ]
+    g = by_gene(_run(tmp_path, recs))
+    assert "ADGENE" not in g
+    assert "ARGENE" not in g
+
+
+def test_clinvar_evidence_only_counts_for_its_gene(tmp_path):
+    # maternal LoF in ARGENE + paternal ClinVar-P variant that ClinVar assigns to ARGENE2
+    # but which also sits in an ARGENE intron: no ARGENE compound het
+    recs = [
+        rec("chr2", 100, "A", "T", ["0/1", "0/0", "0/1"], f"CSQ={csq('ARGENE', 'stop_gained')}"),
+        rec("chr2", 900, "A", "T", ["0/1", "0/1", "0/0"],
+            f"CLNSIG=Pathogenic;GENEINFO=ARGENE2:123;CSQ={csq('ARGENE', 'intron_variant')},{csq('ARGENE2', 'missense_variant')}"),
+    ]
+    g = by_gene(_run(tmp_path, recs))
+    assert "ARGENE" not in g

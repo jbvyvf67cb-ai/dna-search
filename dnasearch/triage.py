@@ -135,10 +135,12 @@ def variant_strength(a: Annotated, gene: str, f: dict, model: str) -> str | None
     """'strong' | 'moderate' | None (not interesting)."""
     if a.clinvar_benign:
         return None
-    if a.clinvar_pathogenic:
-        return "strong"
     eff = next((e for e in a.effects if e.gene == gene), None)
-    cls = eff.effect_class if eff else "low"
+    if eff is None or not inh.in_gene(eff):
+        return None  # ClinVar/consequence evidence belongs to the gene the variant is in
+    if a.clinvar_pathogenic and a.clinvar_applies_to(gene):
+        return "strong"
+    cls = eff.effect_class
     if cls == "lof":
         return "strong"
     if cls == "moderate" and model == inh.DE_NOVO:
@@ -264,8 +266,8 @@ def run(case: Case, vcf_path: str) -> Result:
         secondary = secondary_findings(case, cands)
     for a in cands:
         for e in a.effects:
-            if case.carrier_status and a.variant.calls[pb].gt == HET and \
-                    (a.clinvar_pathogenic or e.effect_class == "lof"):
+            if case.carrier_status and inh.in_gene(e) and a.variant.calls[pb].gt == HET and \
+                    ((a.clinvar_pathogenic and a.clinvar_applies_to(e.gene)) or e.effect_class == "lof"):
                 modes = (case.panels[e.gene].modes if e.gene in case.panels
                          else case.disease_gene_modes.get(e.gene))
                 if modes == frozenset({"AR"}) and not any(
@@ -307,10 +309,12 @@ def secondary_findings(case: Case, cands: list[Annotated]) -> list[Finding]:
         gt = a.variant.calls[pb.id].gt
         n = 2 if gt == HOM_ALT or (pb.sex == 1 and inh.in_nonpar_x(a.variant)) else 1
         for e in a.effects:
-            rule = case.acmg_sf.get(e.gene)
+            rule = case.acmg_sf.get(e.gene) if inh.in_gene(e) else None
             if not rule:
                 continue
             special = rule.get("special", "")
+            if not a.clinvar_applies_to(e.gene):
+                continue
             if special == "lof_only" and e.effect_class != "lof":
                 continue
             if special == "homozygous_only" and gt != HOM_ALT:

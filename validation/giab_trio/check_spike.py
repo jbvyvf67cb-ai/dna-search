@@ -13,7 +13,7 @@ def main(truth_tsv: str, report_dir: str) -> int:
     last_model = ""
     for r in js["findings"]:
         last_model = r["model"] if r["model"] != "↳" else last_model
-        tiers.setdefault(r["variant"], set()).add((r["_tier"], last_model))
+        tiers.setdefault(r["variant"], set()).add((r["_tier"], last_model, r["gene"]))
     sf = {r["variant"] for r in js.get("secondary_findings") or []}
     car = {r["variant"] for r in js.get("carriers") or []}
 
@@ -23,16 +23,16 @@ def main(truth_tsv: str, report_dir: str) -> int:
         v, exp = t["variant"], t["expected"]
         obs = sorted(tiers.get(v, set()))
         if exp == "tier1":
-            ok = any(tr == "1" and m == t["model"] for tr, m in obs)
+            ok = any(tr == "1" and m == t["model"] and g == t["gene"] for tr, m, g in obs)
         elif exp == "not_tiered":
-            ok = not any(tr in ("1", "2") for tr, _ in obs)
+            ok = not any(tr in ("1", "2") for tr, _, _ in obs)
         elif exp == "carrier":
-            ok = v in car and not any(tr == "1" for tr, _ in obs)
+            ok = v in car and not any(tr == "1" for tr, _, _ in obs)
         elif exp == "secondary":
             ok = v in sf
         else:
             ok = False
-        desc = ", ".join(f"T{tr}:{m}" for tr, m in obs) or "-"
+        desc = ", ".join(f"T{tr}:{g}:{m}" for tr, m, g in obs) or "-"
         desc += " +SF" if v in sf else ""
         desc += " +carrier" if v in car else ""
         print(f"{t['scenario']:20s} {t['gene']:6s} {exp:10s} {desc:40s} {'PASS' if ok else 'FAIL'}")

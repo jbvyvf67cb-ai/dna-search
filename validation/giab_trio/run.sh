@@ -145,7 +145,7 @@ fetch_gnomad() {  # fetch_gnomad sites.tsv  (CHROM<TAB>POS); appends to the shar
 
 annotate_vcf() {  # annotate_vcf in.vcf.gz out.vcf.gz   (ClinVar -> VEP -> gnomAD)
   local in=$1 out=$2 A="$WORK/annot" base=${2%.vcf.gz}
-  run "$BCFTOOLS" sh -c "bcftools annotate -a $A/clinvar.vcf.gz -c INFO/CLNSIG,INFO/CLNREVSTAT $in -Oz -o $base.cv.vcf.gz"
+  run "$BCFTOOLS" sh -c "bcftools annotate -a $A/clinvar.vcf.gz -c INFO/CLNSIG,INFO/CLNREVSTAT,INFO/GENEINFO $in -Oz -o $base.cv.vcf.gz"
   # GFF + FASTA annotation needs no VEP cache (the cache is ~25 GB); --offline would demand one
   run "$VEP" vep --format vcf --vcf --force_overwrite --no_stats --fork "$THREADS" \
     -i "$base.cv.vcf.gz" -o "$base.vep.vcf.gz" --compress_output bgzip \

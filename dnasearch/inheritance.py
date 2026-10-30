@@ -41,6 +41,13 @@ def in_nonpar_x(v: Variant) -> bool:
     return c == "X" and not any(a <= v.pos <= b for a, b in PAR["X"])
 
 
+NOT_IN_GENE = {"upstream_gene_variant", "downstream_gene_variant", "intergenic_variant"}
+
+
+def in_gene(eff) -> bool:
+    return eff.consequence not in NOT_IN_GENE
+
+
 @dataclass
 class Hit:
     gene: str
@@ -95,7 +102,9 @@ def variant_models(a: Annotated, ped: Pedigree) -> list[str]:
 
     if ori == "de_novo":
         models.append(DE_NOVO)
-    if g == HET:
+    # an unaffected parent homozygous for the allele rules out a dominant effect
+    unaffected_hom = any(unaffected(p) and _gt(v, p) == HOM_ALT for p in (ped.father, ped.mother))
+    if g == HET and not unaffected_hom:
         if ori in ("paternal", "maternal"):
             # allele from an unaffected parent needs reduced penetrance; flagged in find_hits
             models.append(AD_INHERITED)
@@ -116,6 +125,8 @@ def find_hits(cands: list[Annotated], ped: Pedigree) -> dict[str, list[Hit]]:
     for a in cands:
         models = variant_models(a, ped)
         for eff in a.effects:
+            if not in_gene(eff):
+                continue  # up/downstream of a gene says nothing about that gene
             for m in models:
                 note = ""
                 if m == AD_INHERITED:
@@ -123,6 +134,9 @@ def find_hits(cands: list[Annotated], ped: Pedigree) -> dict[str, list[Hit]]:
                     parent = ped.father if ori == "paternal" else ped.mother
                     note = f"inherited from {ori} parent" + (
                         " (unaffected: needs reduced penetrance)" if parent and parent.affected is False else "")
+                if m == AD_UNPHASED and origin(a.variant, ped) == "both" and any(
+                        p.affected is False for p in (ped.father, ped.mother)):
+                    note = "both parents carry it, at least one unaffected: needs reduced penetrance"
                 if m == AR_HOM and ped.is_trio and HOM_REF in (_gt(a.variant, ped.father), _gt(a.variant, ped.mother)):
                     note = "a parent is hom-ref: possible deletion on other allele or uniparental disomy"
                 if m == XL_HEMI and _gt(a.variant, pb) == HET:
@@ -139,6 +153,8 @@ def find_hits(cands: list[Annotated], ped: Pedigree) -> dict[str, list[Hit]]:
         for i, a in enumerate(vs):
             for b in vs[i + 1:]:
                 oa, ob = origin(a.variant, ped), origin(b.variant, ped)
+                if _parent_excludes_pair(a.variant, b.variant, ped):
+                    continue
                 if not ped.is_trio or "unknown" in (oa, ob):
                     model, note = COMPHET_UNPHASED, "phase unknown: could be on the same copy (cis)"
                 elif oa == ob and oa in ("paternal", "maternal"):
@@ -150,6 +166,20 @@ def find_hits(cands: list[Annotated], ped: Pedigree) -> dict[str, list[Hit]]:
                 hits[a.variant.key].append(Hit(gene, model, partner=b.variant.key, note=note))
                 hits[b.variant.key].append(Hit(gene, model, partner=a.variant.key, note=note))
     return hits
+
+
+def _parent_excludes_pair(a: Variant, b: Variant, ped: Pedigree) -> bool:
+    """An unaffected parent who is homozygous for either variant, or carries both, rules out
+    the pair: either the parent would be affected, or the two variants travel together (cis)."""
+    for p in (ped.father, ped.mother):
+        if p is None or p.affected is not False:
+            continue
+        ga, gb = _gt(a, p), _gt(b, p)
+        if HOM_ALT in (ga, gb):
+            return True
+        if ga in (HET, HOM_ALT) and gb in (HET, HOM_ALT):
+            return True
+    return False
 
 
 def mendelian_error(child: Call, father: Call, mother: Call, child_male_x: bool = False) -> bool | None:
